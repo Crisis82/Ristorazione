@@ -7,7 +7,7 @@ import Eccezioni.alcuniPiattiNonServiti;
  */
 public class Comanda{
     private int numeroComanda;
-    private HashMap<Pietanza,Boolean> pietanze;
+    private HashMap<PietanzaVariabile,Boolean> pietanze;
     private boolean servita;
 
     /**
@@ -31,7 +31,7 @@ public class Comanda{
      * aggiunge una pietanza alla comanda verificando che non sia nulla
      * @param daAggiungere pietanza da aggiungere
      */
-    public void aggiungiPietanza(Pietanza daAggiungere){
+    public void aggiungiPietanza(PietanzaVariabile daAggiungere){
         if(daAggiungere!=null){
             pietanze.put(daAggiungere, false);
         }
@@ -41,7 +41,7 @@ public class Comanda{
      * rimuove una pietanza non nulla
      * @param daRimuovere pietanza da rimuovere
      */
-    public void rimuoviPietanza(Pietanza daRimuovere){
+    public void rimuoviPietanza(PietanzaVariabile daRimuovere){
         if(daRimuovere!=null){
             pietanze.remove(daRimuovere);
         }
@@ -51,7 +51,7 @@ public class Comanda{
      * cambia il valore della pietnza consegnata da false a true
      * @param Consegnata pietanza che è stata consegnata
      */
-    public void setPietanzaServita(Pietanza Consegnata){
+    public void setPietanzaServita(PietanzaVariabile Consegnata){
         pietanze.replace(Consegnata, true);
     }
 
@@ -106,7 +106,7 @@ public class Comanda{
         Iterator it = set.iterator();
         while (it.hasNext()){
             Map.Entry mapPiatto = (Map.Entry) it.next();
-            Pietanza piattoSingolo = (Pietanza) mapPiatto.getKey();
+            PietanzaVariabile piattoSingolo = (PietanzaVariabile) mapPiatto.getKey();
             costoComanda += piattoSingolo.getPrezzo();
         }
 

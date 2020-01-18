@@ -1,3 +1,6 @@
+/**
+ * Classe per gestire le caratteristiche di un piatto
+ */
 public class Pietanza {
     private String nome;
     private Double prezzo;
