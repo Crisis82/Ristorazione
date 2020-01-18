@@ -1,5 +1,5 @@
 import java.util.List;
-import Eccezzioni.ComandaNonValida;
+import Eccezioni.comandaNonValida;
 
 public class Tavolo{
     private int numero;
@@ -57,14 +57,14 @@ public class Tavolo{
     /**
      * aggiunge una comanda al tavolo assegnandogli un numero
      * @param daAggiungere comanda da aggiungere
-     * @throws ComandaNonValida
+     * @throws comandaNonValida
      */
-    public void addComanda(Comanda daAggiungere) throws ComandaNonValida{
+    public void addComanda(Comanda daAggiungere) throws comandaNonValida {
         if(daAggiungere!=null){
             daAggiungere.setNumeroComanda(quantitaComande+1);
             comande.add(daAggiungere);
         }else{
-            throw new ComandaNonValida();
+            throw new comandaNonValida();
         }
     }
 

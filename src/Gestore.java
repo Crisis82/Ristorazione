@@ -1,6 +1,3 @@
-import Eccezzioni.elementoNonPresente;
-
-
 /**
  * interfaccia per la gestione degli elemento di alcune classi
  * @param <T> tipo di classe

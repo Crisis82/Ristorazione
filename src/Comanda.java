@@ -1,6 +1,6 @@
 import java.util.*;
 
-import Eccezzioni.alcuniPiattiNonServiti;
+import Eccezioni.alcuniPiattiNonServiti;
 
 /**
  * classe per la gestiona di una singola comanda di un tavolo
